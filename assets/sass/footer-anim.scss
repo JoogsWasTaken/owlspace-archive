@@ -1,0 +1,71 @@
+/* bird sprite */
+@keyframes bird-idle {
+
+    0% {
+        background-position-x: -256px;
+    }
+    
+    100% {
+        background-position-x: -384px;
+    }
+
+}
+
+@keyframes bird-pat {
+
+    0% {
+        background-position-x: -192px;
+    }
+
+    100% {
+        background-position-x: 64px;
+    }
+
+}
+
+body:not(.js) .footer-sprite {
+    background-image: url("../images/owl-sprite-2x.png");
+}
+
+#footer .footer-sprite {
+    cursor: grab;
+    width: 64px;
+    height: 64px;
+    background-position-x: -256px;
+
+    animation: bird-idle 1s steps(2) infinite;
+    flex: 0 0 64px;
+
+    // touchscreen workaround
+    &:hover, &.hover {
+        animation: bird-pat 2s steps(4) infinite;
+    }
+
+    &.footer-sprite-owl {
+        background-image: url("../images/owl-sprite-2x.png");
+    }
+
+    &.footer-sprite-crow {
+        background-image: url("../images/crow-sprite-2x.png");
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+    #footer {
+        flex-direction: column;
+
+        :nth-child(1) {
+            order: 1;
+        }
+
+        :nth-child(2) {
+            order: 3;
+        }
+
+        :nth-child(3) {
+            order: 2;
+        }
+    }
+
+}

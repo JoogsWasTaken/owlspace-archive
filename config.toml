@@ -1,0 +1,43 @@
+baseURL = "http://localhost/"
+languageCode = "en"
+title = "owlspace"
+theme = "owlspace"
+
+# Up to three posts per page.
+paginate = 3
+# Keep section titles as they are.
+pluralizeListTitles = false
+# Enable menu.
+sectionPagesMenu = "main"
+# Enable canonical URLs.
+canonifyURLs = true
+# Disable taxonomies.
+disableKinds = [ "taxonomy", "term" ]
+
+[social]
+  twitter = "asciiowl"
+
+[params]
+  # Subheading under the page title.
+  subtitle = "Cybersec nerd doing nerd things"
+  # OpenGraph description
+  description = "Cybersec nerd doing nerd things"
+  # Noscript content.
+  noscript = "**Sorry to annoy you.** I took great care of making this site browsable without scripts enabled. However, you stumbled upon one of the few exceptions here. This article requires some scripts to work flawlessly. Don't worry, I'm not going to collect any data from you or mine bitcoins in your browser. Neither will I include malicious scripts from external sources. Of course, you're free to keep scripting disabled, but don't be surprised if some parts of this article appear broken."
+  # Theme color.
+  themeColor = "#000000"
+
+[permalinks]
+  # Simple permalinks for all pages.
+  "/" = "/:section/:slug"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      # Don't automatically convert links in text.
+      linkify = false
+
+  [markup.highlight]
+    # Enable custom syntax highlighting.
+    noClasses = false
+    # lineNos = true

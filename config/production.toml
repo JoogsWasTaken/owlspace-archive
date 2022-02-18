@@ -1,0 +1,4 @@
+baseURL = "https://owlspace.xyz/"
+
+[minify]
+  minifyOutput = true

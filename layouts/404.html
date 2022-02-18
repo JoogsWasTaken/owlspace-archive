@@ -1,0 +1,72 @@
+{{ define "title" }}
+    {{ "Not Found" }} // {{ .Site.Title }}
+{{ end }}
+{{ define "main" }}
+<section>
+    <div class="error">
+        <div id="owlspace"></div>
+        <h1>404 - Not Found</h1>
+        <h2>Hoo are you looking for?</h2>
+        <p><a href="{{ .Site.BaseURL }}">Go back to the homepage</a></p>
+    </div>
+</section>
+{{ end }}
+{{ define "css" }}
+<style>
+    @keyframes owlspace {
+
+        0% {
+            opacity: 0;
+        }
+
+        50% {
+            opacity: 0;
+            transform: translate(-350px, -50px) rotate(30deg);
+        }
+
+        55% {
+            opacity: .5;
+        }
+
+        95% {
+            opacity: .5;
+        }
+
+        100% {
+            opacity: 0;
+            transform: translate(350px, 70px) rotate(130deg);
+        }
+
+    }
+
+    .footer-sprite {
+        visibility: hidden;
+    }
+
+    #menu {
+        z-index: 100;
+    }
+
+    .error {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .error::before {
+        content: "";
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        z-index: -1;
+        opacity: 0;
+
+        top: calc(50% - 24px);
+        left: calc(50% - 32px);
+
+        background-position-x: -256px;
+        background-image: url("../images/head-bop.gif");
+
+        animation: owlspace 20s linear infinite;
+    }
+</style>
+{{ end }}

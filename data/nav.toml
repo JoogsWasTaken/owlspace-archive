@@ -1,0 +1,9 @@
+order = [ "index", "about" ]
+
+[index]
+  name = "Home"
+  url = "/"
+
+[about]
+  name = "About"
+  url = "/about/"

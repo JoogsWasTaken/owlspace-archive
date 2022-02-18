@@ -1,0 +1,6 @@
+<footer id="footer">
+    {{ $footer := $.Site.Data.footer.content }}
+    <div class="footer-info">{{ index $footer 0 | markdownify }}</div>
+    <div class="footer-sprite"></div>
+    <div class="footer-info">{{ index $footer 1 | markdownify }}</div>
+</footer>
